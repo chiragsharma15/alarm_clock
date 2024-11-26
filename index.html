@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm</title>
+<!-- Google Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+    </style>
+<!-- fontawesome icons  -->
+    <script src="https://kit.fontawesome.com/c2bcdcc44a.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="assets/images/clockFavicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="alarm-clock">
+            <h3 id="current-time-header">Current time</h3>
+            <div id="current-time-body">
+                <h1 id="current-time-clock">00:00:00 PM</h1>
+                <i class="fa-regular fa-clock"></i>
+            </div>
+    <!---- set Alarm ---->
+            <div class="alarm-container">
+                <div class="alarm-header">
+                    <h2>Set Alarm</h2>
+                </div>
+    <!---- alarm body ---->
+                <div class="alarm-body">
+                    <div class="time-picker">
+        
+                        <div class="hour-picker">
+                            <div class="up-down-buttons">
+                                <div class="arrow up">
+                                    <i class="fa-solid fa-caret-up"></i>
+                                </div>
+                                <div class="arrow down">
+                                    <i class="fa-solid fa-caret-down"></i>
+                                </div>
+                            </div>
+                            <input type="text" id="hour" class="input" value="12" readonly>
+                        </div>
+        
+                        <div class="minute-picker">
+                            <div class="up-down-buttons">
+                                <div class="arrow up">
+                                    <i class="fa-solid fa-caret-up"></i>
+                                </div>
+                                <div class="arrow down">
+                                    <i class="fa-solid fa-caret-down"></i>
+                                </div>
+                            </div>
+                            <input type="text" id="minute" class="input" value="00" readonly>
+                        </div>
+        
+                        <div class="ampm-picker">
+                            <div class="up-down-buttons">
+                                <div class="arrow up">
+                                    <i class="fa-solid fa-caret-up"></i>
+                                </div>
+                                <div class="arrow down">
+                                    <i class="fa-solid fa-caret-down"></i>
+                                </div>
+                            </div>
+                            <input type="text" id="ampm" class="input" value="AM" readonly>
+                        </div>
+                    </div>
+                    <div class="date-picker">
+                        <input type="date" id="dateInput" name="dateInput">
+                    </div>
+                </div>
+    <!---- alarm button ---->
+                <div class="alarm-button">
+                    <label for="ringtone">Set Alarm Ringtone</label>
+                    <input type="file" id="ringtone" accept="audio/*">
+                    <button id="set-alarm">Set Alarm</button>
+                </div>
+    <!-- alarm's List -->
+                <div id="alarm-lists-wrapper">
+                    <ul id="alarm-lists">
+                        <!-- <input type="checkbox" id="${alarm.id}" ${alarm.completed ? '' : 'checked'} class="custom-checkbox">
+                        <label id="toggle-alarm" class="toggle" for="${alarm.id}">
+                            <i class="${alarm.completed ? 'fa-solid fa-toggle-off' : 'fa-solid fa-toggle-on'}"></i>
+                        </label>
+                        <label class="alarm-time" for="${alarm.id}">
+                            <span>
+                                ${alarm.time}
+                            </span>
+                            <span>
+                                ${alarm.date}
+                            </span>
+                        </label>
+                        <i class="fa-solid fa-trash delete" data-id="${alarm.id}"></i>  -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <!--- clear Alarm --->
+        <div id="clear-alarm-container">
+            <h3 id="clear-alarm-heading">Alarm</h3>
+            <span class="clear-alarm-time">00:00:00 PM</span>
+            <button id="clear-alarm">Clear Alarm</button>
+        </div>
+
+    </div>
+    
+
+<!--- script --->
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

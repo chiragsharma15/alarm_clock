@@ -1,0 +1,257 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+#alarm-clock{
+    max-width: 350px;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    margin: 20px auto;
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: rgb(199, 152, 152);
+}
+
+
+/*---- current Time ----*/
+#alarm-clock #current-time-header{
+    color: rgb(148, 116, 116);
+    padding: 0px 30px 0px 30px;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+
+}
+#alarm-clock #current-time-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px 0px 30px;
+}
+
+#alarm-clock #current-time-body #current-time-clock{
+    color: rgb(199, 152, 152);
+    
+}
+
+#alarm-clock #current-time-body i{
+    font-size: 4rem;
+}
+
+/* set Alarm */
+.alarm-container{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(29, 27, 27);
+    border-radius: 15px;
+    padding: 10px;
+    
+}
+
+.alarm-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* padding: 10px; */
+    /* align-items: center; */
+}
+
+.alarm-header{
+    color: rgb(233, 190, 190);
+}
+
+
+/*----- time picker -----*/
+.time-picker {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.disable{
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.time-picker .hour-picker{
+    display: flex;
+    color: rgb(233, 190, 190);
+
+}
+
+.time-picker .minute-picker{
+    display: flex;
+    color: rgb(233, 190, 190);
+
+}
+
+.time-picker .ampm-picker{
+    display: flex;
+    color: rgb(233, 190, 190);
+
+}
+
+.time-picker input{
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    text-align: center;
+    font-family: inherit;
+    background-color: rgb(48, 41, 41);
+    color: rgb(52, 175, 165);
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+}
+
+.time-picker .up-down-buttons{
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.arrow i{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/*--- date-picker ---*/
+.date-picker{
+    width: 100%;
+}
+
+.date-picker input[type="date"] {
+    padding: 0px 5% 0px 5%;
+    width: 90%;
+    border: none;
+    border-radius: 10px;
+    font-family: inherit;
+    height: 50px;
+    background-color: rgb(48, 41, 41);
+    color: rgb(52, 175, 165);
+    font-size: 1.2rem;
+    font-weight: 500;
+
+}
+
+/*---- alarm-button ----*/
+.alarm-button{
+    display: flex;
+    justify-content: space-between;
+}
+.alarm-button label{
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(46, 43, 43);
+    color: rgb(52, 175, 165);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.alarm-button #ringtone{
+    display: none;
+}
+.alarm-button #set-alarm{
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    /* background-color: rgb(40, 200, 186); */
+    /* color: rgb(248, 210, 210); */
+    color: rgb(46, 43, 43);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* ---- alarm List ----- */
+#alarm-lists-wrapper{
+    border-top: 1px solid grey;
+}
+
+#alarm-lists-wrapper #alarm-lists{
+    padding: 0;
+}
+
+#alarm-lists-wrapper #alarm-lists li{
+    background-color: rgb(46, 43, 43);
+    color: rgb(165, 164, 164);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#alarm-lists-wrapper #alarm-lists li input[type='checkbox']{
+    display: none;
+}
+
+#alarm-lists-wrapper #alarm-lists li label i::before{
+    transition: all ease-in-out 2s;
+}
+
+#alarm-lists-wrapper #alarm-lists li .delete{
+    color: rgb(202, 26, 55);
+    cursor: pointer;
+}
+
+#alarm-lists-wrapper #alarm-lists li .alarm-time{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+/* clear-alarm-container */
+
+#clear-alarm-container{
+    position: absolute;
+    background-color: rgb(17, 16, 16);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 15px;
+    color: rgb(199, 115, 115);
+    display: none;
+}
+
+#clear-alarm-container h4{
+    font-family: inherit;
+}
+
+#clear-alarm-container #clear-alarm-heading{
+    font-size: 1.5rem;
+}
+
+#clear-alarm-container .clear-alarm-time{
+    font-size: 1.8rem;
+    font-family: inherit;
+    margin-bottom: 20px;
+}
+
+#clear-alarm-container #clear-alarm{
+    font-size: 1.3rem;
+    border-radius: 15px;
+    border: none;
+    width: 150px;
+    padding: 5px;
+    background-color: rgb(216, 16, 16);
+    color: rgb(197, 168, 168);
+    margin-bottom: 20px;
+}
+
